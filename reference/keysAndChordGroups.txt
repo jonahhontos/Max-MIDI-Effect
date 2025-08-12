@@ -1,0 +1,2 @@
+1, ionian ionianRelativeModes chordFunctionsMajor 7 major;
+2, aeolian harmonicMinorRelativeModes chordFunctionsMinor 7 minor;
