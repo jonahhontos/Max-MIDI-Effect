@@ -12,6 +12,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[4, 7, 11],
 			[7, 11, 4],
@@ -21,7 +22,8 @@
 			"3 5 7",
 			"5 7 3",
 			"7 3 5"
-		]
+		],
+		"rightShapeName": "min Triad on 3"
 	},
 	"shellMaj7": {
 		"displayName": "Maj7 (Shell)",
@@ -36,6 +38,7 @@
 			"3 7 1",
 			"7 1 3"
 		],
+		"leftShapeName": "Maj7 Shell",
 		"right": [
 			[4, 7, 11],
 			[7, 11, 4],
@@ -45,7 +48,8 @@
 			"3 5 7",
 			"5 7 3",
 			"7 3 5"
-		]
+		],
+		"rightShapeName": "min Triad on 3"
 	},
 	"min7": {
 		"displayName": "min7",
@@ -60,6 +64,7 @@
 			"b3 5 1",
 			"5 1 b3"
 		],
+		"leftShapeName": "min Triad",
 		"right": [
 			[3, 7, 10],
 			[7, 10, 3],
@@ -69,7 +74,8 @@
 			"b3 5 b7",
 			"5 b7 b3",
 			"b7 b3 5"
-		]
+		],
+		"rightShapeName": "Maj Triad on b3"
 	},
 	"shellMin7": {
 		"displayName": "min7 (Shell)",
@@ -84,6 +90,7 @@
 			"b3 b7 1",
 			"b7 1 b3"
 		],
+		"leftShapeName": "min7 Shell",
 		"right": [
 			[3, 7, 10],
 			[7, 10, 3],
@@ -93,7 +100,8 @@
 			"b3 5 b7",
 			"5 b7 b3",
 			"b7 b3 5"
-		]
+		],
+		"rightShapeName": "Maj Triad on b3"
 	},
 	"dom7": {
 		"displayName": "7",
@@ -108,6 +116,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[4, 7, 10],
 			[7, 10, 4],
@@ -117,7 +126,8 @@
 			"3 5 b7",
 			"5 b7 3",
 			"b7 3 5"
-		]
+		],
+		"rightShapeName": "° Triad on 3"
 	},
 	"shellDom7": {
 		"displayName": "7 (Shell)",
@@ -132,6 +142,7 @@
 			"3 b7 1",
 			"b7 1 3"
 		],
+		"leftShapeName": "Dom7 Shell",
 		"right": [
 			[4, 7, 10],
 			[7, 10, 4],
@@ -141,7 +152,8 @@
 			"3 5 b7",
 			"5 b7 3",
 			"b7 3 5"
-		]
+		],
+		"rightShapeName": "° Triad on 3"
 	},
 	"halfDim7": {
 		"displayName": "Half Dim 7",
@@ -156,6 +168,7 @@
 			"b3 b5 1",
 			"b5 1 b3"
 		],
+		"leftShapeName": "° Triad",
 		"right": [
 			[3, 6, 10],
 			[6, 10, 3],
@@ -165,7 +178,8 @@
 			"b3 b5 b7",
 			"b5 b7 b3",
 			"b7 b3 b5"
-		]
+		],
+		"rightShapeName": "min Triad on b3"
 	},
 	"shellHalfDim7": {
 		"displayName": "ø7 (Shell)",
@@ -180,6 +194,7 @@
 			"b5 b7 1",
 			"b7 1 b5"
 		],
+		"leftShapeName": "min7 Shell",
 		"right": [
 			[3, 6, 10],
 			[6, 10, 3],
@@ -189,7 +204,8 @@
 			"b3 b5 b7",
 			"b5 b7 b3",
 			"b7 b3 b5"
-		] 
+		],
+		"rightShapeName": "min Triad on b3"
 	},
 	"fullDim7": {
 		"displayName": "°7",
@@ -204,6 +220,7 @@
 			"b3 b5 1",
 			"b5 1 b3"
 		],
+		"leftShapeName": "° Triad",
 		"right": [
 			[3, 6, 9],
 			[6, 9, 3],
@@ -213,7 +230,8 @@
 			"b3 b5 bb7",
 			"b5 bb7 b3",
 			"bb7 b3 b5"
-		]
+		],
+		"rightShapeName": "° Triad on b3"
 	},
 	"maj9": {
 		"displayName": "Maj9",
@@ -228,6 +246,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[7, 11, 2],
 			[11, 2, 7],
@@ -237,7 +256,8 @@
 			"5 7 9",
 			"7 9 5",
 			"9 5 7"
-		]
+		],
+		"rightShapeName": "min Triad on 5"
 	},
 	"shellMaj9": {
 		"displayName": "Maj9 (Shell)",
@@ -252,6 +272,7 @@
 			"3 7 1",
 			"7 1 3"
 		],
+		"leftShapeName": "Maj7 Shell",
 		"right": [
 			[7, 11, 2],
 			[11, 2, 7],
@@ -261,21 +282,23 @@
 			"5 7 9",
 			"7 9 5",
 			"9 5 7"
-		]
+		],
+		"rightShapeName": "min Triad on 5"
 	},
 	"majAdd9": {
 		"displayName": "Maj Add9",
 		"id": "majAdd9",
 		"left": [
-			[0, 4, 11],
-			[4, 11, 0],
-			[11, 0, 4]
+			[0, 4, 7],
+			[4, 7, 0],
+			[7, 0, 4]
 		],
 		"leftDisplayNames": [
-			"1 3 7",
-			"3 7 1",
-			"7 1 3"
+			"1 3 5",
+			"3 5 1",
+			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[4, 7, 2],
 			[7, 2, 4],
@@ -285,7 +308,8 @@
 			"3 5 9",
 			"5 9 3",
 			"9 3 5"
-		]
+		],
+		"rightShapeName": "min7 shell on 3"
 	},
 	"min9": {
 		"displayName": "min9",
@@ -300,6 +324,7 @@
 			"b3 5 1",
 			"5 1 b3"
 		],
+		"leftShapeName": "min Triad",
 		"right": [
 			[7, 10, 2],
 			[10, 2, 7],
@@ -309,7 +334,8 @@
 			"5 b7 9",
 			"b7 9 5",
 			"9 5 b7"
-		]
+		],
+		"rightShapeName": "min Triad on 5"
 	},
 	"shellMin9": {
 		"displayName": "min9 (Shell)",
@@ -324,6 +350,7 @@
 			"b3 b7 1",
 			"b7 1 b3"
 		],
+		"leftShapeName": "min7 Shell",
 		"right": [
 			[7, 10, 2],
 			[10, 2, 7],
@@ -333,7 +360,8 @@
 			"5 b7 9",
 			"b7 9 5",
 			"9 5 b7"
-		]
+		],
+		"rightShapeName": "min Triad on 5"
 	},
 	"minAdd9": {
 		"displayName": "min add9",
@@ -348,6 +376,7 @@
 			"b3 5 1",
 			"5 1 b3"
 		],
+		"leftShapeName": "min Triad",
 		"right": [
 			[3, 7, 2],
 			[7, 2, 3],
@@ -357,7 +386,8 @@
 			"b3 5 9",
 			"5 9 b3",
 			"9 b3 5"
-		]
+		],
+		"rightShapeName": "Maj7 shell on b3"
 	},
 	"dom9": {
 		"displayName": "9",
@@ -372,6 +402,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[7, 10, 2],
 			[10, 2, 7],
@@ -381,7 +412,8 @@
 			"5 b7 9",
 			"b7 9 5",
 			"9 5 b7"
-		]
+		],
+		"rightShapeName": "min Triad on 5"
 	},
 	"shellDom9": {
 		"displayName": "9 (Shell)",
@@ -396,6 +428,7 @@
 			"3 b7 1",
 			"b7 1 3"
 		],
+		"leftShapeName": "Dom7 Shell",
 		"right": [
 			[7, 10, 2],
 			[10, 2, 7],
@@ -405,7 +438,8 @@
 			"5 b7 9",
 			"b7 9 5",
 			"9 5 b7"
-		]
+		],
+		"rightShapeName": "min Triad on 5"
 	},
 	"domb9": {
 		"displayName": "b9",
@@ -420,6 +454,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[7, 10, 1],
 			[10, 1, 7],
@@ -429,7 +464,8 @@
 			"5 b7 b9",
 			"b7 b9 5",
 			"b9 5 b7"
-		]
+		],
+		"rightShapeName": "dim Triad on 5"
 	},
 	"shellDomb9": {
 		"displayName": "b9 (Shell)",
@@ -468,6 +504,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[3, 7, 10],
 			[7, 10, 3],
@@ -477,7 +514,8 @@
 			"#9 5 b7",
 			"5 b7 #9",
 			"b7 #9 5"
-		]
+		],
+		"rightShapeName": "Maj Triad on #9"
 	},
 	"shellDomSharp9": {
 		"displayName": "#9 (Shell)",
@@ -492,6 +530,7 @@
 			"3 b7 1",
 			"b7 1 3"
 		],
+		"leftShapeName": "Dom7 Shell",
 		"right": [
 			[3, 7, 10],
 			[7, 10, 3],
@@ -501,7 +540,8 @@
 			"#9 5 b7",
 			"5 b7 #9",
 			"b7 #9 5"
-		]
+		],
+		"rightShapeName": "Maj Triad on #9"
 	},
 	"maj7Sharp11": {
 		"displayName": "Maj7 #11",
@@ -516,6 +556,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[4, 6, 11],
 			[6, 11, 4],
@@ -525,7 +566,8 @@
 			"3 #11 7",
 			"#11 7 3",
 			"7 3 #11"
-		]
+		],
+		"rightShapeName": "sus2 on 3"
 	},
 	"shellMaj7Sharp11": {
 		"displayName": "Maj7 #11 (Shell)",
@@ -540,16 +582,18 @@
 			"3 7 1",
 			"7 1 3"
 		],
+		"leftShapeName": "Maj7 Shell",
 		"right": [
-			[6, 7, 11],
 			[7, 11, 6],
-			[11, 6, 7]
+			[11, 6, 7],
+			[6, 7, 11]
 		],
 		"rightDisplayNames": [
-			"#11 5 7",
 			"5 7 #11",
-			"7 #11 5"
-		]
+			"7 #11 5",
+			"#11 5 7"
+		],
+		"rightShapeName": "Maj7 shell on 5"
 	},
 	"majSharp11": {
 		"displayName": "Maj #11",
@@ -564,6 +608,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[11, 2, 6],
 			[2, 6, 11],
@@ -573,7 +618,8 @@
 			"7 9 #11",
 			"9 #11 7",
 			"#11 7 9"
-		]
+		],
+		"rightShapeName": "min Triad on 7"
 	},
 	"shellMajSharp11": {
 		"displayName": "Maj #11 (Shell)",
@@ -588,16 +634,18 @@
 			"3 7 1",
 			"7 1 3"
 		],
+		"leftShapeName": "Maj7 Shell",
 		"right": [
+			[7, 2, 6],
 			[2, 6, 7],
-			[6, 7, 2],
-			[7, 2, 6]
+			[6, 7, 2]
 		],
 		"rightDisplayNames": [
+			"5 9 #11",
 			"9 #11 5",
-			"#11 5 9",
-			"5 9 #11"
-		]
+			"#11 5 9"
+		],
+		"rightShapeName": "Maj7 5th shell on 5"
 	},
 	"min11": {
 		"displayName": "min11",
@@ -612,6 +660,7 @@
 			"b3 5 1",
 			"5 1 b3"
 		],
+		"leftShapeName": "min Triad",
 		"right": [
 			[10, 2, 5],
 			[2, 5, 10],
@@ -621,7 +670,8 @@
 			"b7 9 11",
 			"9 11 b7",
 			"11 b7 9"
-		]
+		],
+		"rightShapeName": "Maj Triad on b7"
 	},
 	"shellMin11": {
 		"displayName": "min11 (Shell)",
@@ -636,6 +686,7 @@
 			"b3 b7 1",
 			"b7 1 b3"
 		],
+		"leftShapeName": "min7 Shell",
 		"right": [
 			[7, 2, 5],
 			[2, 5, 7],
@@ -645,7 +696,8 @@
 			"5 9 11",
 			"9 11 5",
 			"11 5 9"
-		]
+		],
+		"rightShapeName": "min7 5th shell on 5"
 	},
 	"halfDim11": {
 		"displayName": "ø11",
@@ -660,6 +712,7 @@
 			"b3 b5 1",
 			"b5 1 b3"
 		],
+		"leftShapeName": "° Triad",
 		"right": [
 			[3, 5, 10],
 			[5, 10, 3],
@@ -669,7 +722,8 @@
 			"b3 11 b7",
 			"11 b7 b3",
 			"b7 b3 11"
-		]
+		],
+		"rightShapeName": "sus2 on b3"
 	},
 	"shellHalfDim11": {
 		"displayName": "ø11 (Shell)",
@@ -684,6 +738,7 @@
 			"b5 b7 1",
 			"b7 1 b5"
 		],
+		"leftShapeName": "min7 b5 shell",
 		"right": [
 			[6, 10, 5],
 			[10, 5, 6],
@@ -693,7 +748,8 @@
 			"b5 b7 11",
 			"b7 11 b5",
 			"11 b5 b7"
-		]
+		],
+		"rightShapeName": "Maj7 shell on b5"
 	},
 	"dom7Add11": {
 		"displayName": "7 add11",
@@ -708,6 +764,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[5, 10, 4],
 			[10, 4, 5],
@@ -717,7 +774,60 @@
 			"11 b7 3",
 			"b7 3 11",
 			"3 11 b7"
-		]
+		],
+		"rightShapeName": "4th + Tritone on 4"
+	},
+	"domSharp11": {
+		"displayName": "#11",
+		"id": "domSharp11",
+		"left": [
+			[0, 4, 7],
+			[4, 7, 0],
+			[7, 0, 4]
+		],
+		"leftDisplayNames": [
+			"1 3 5",
+			"3 5 1",
+			"5 1 3"
+		],
+		"leftShapeName": "Maj Triad",
+		"right": [
+			[10, 2, 6],
+			[2, 6, 10],
+			[6, 10, 2]
+		],
+		"rightDisplayNames": [
+			"b7 9 #11",
+			"9 #11 b7",
+			"#11 b7 9"
+		],
+		"rightShapeName": "Aug Triad on b7"
+	},
+	"shellDomSharp11": {
+		"displayName": "#11 (Shell)",
+		"id": "shellDomSharp11",
+		"left": [
+			[0, 4, 10],
+			[4, 10, 0],
+			[10, 0, 4]
+		],
+		"leftDisplayNames": [
+			"1 3 b7",
+			"3 b7 1",
+			"b7 1 3"
+		],
+		"leftShapeName": "Dom7 Shell",
+		"right": [
+			[7, 2, 6],
+			[2, 6, 7],
+			[6, 7, 2]
+		],
+		"rightDisplayNames": [
+			"5 9 #11",
+			"9 #11 5",
+			"#11 5 9"
+		],
+		"rightShapeName": "Maj7 5th shell on 5"
 	},
 	"domb9Sharp11": {
 		"displayName": "b9 #11",
@@ -732,6 +842,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Dom7 Shell",
 		"right": [
 			[6, 10, 1],
 			[10, 1, 6],
@@ -741,7 +852,8 @@
 			"#11 b7 b9",
 			"b7 b9 #11",
 			"b9 #11 b7"
-		]
+		],
+		"rightShapeName": "Maj Triad on #11"
 	},
 	"shellDomb9Sharp11": {
 		"displayName": "b9 #11 (Shell)",
@@ -756,6 +868,7 @@
 			"3 b7 1",
 			"b7 1 3"
 		],
+		"leftShapeName": "Dom7 Shell",
 		"right": [
 			[6, 10, 1],
 			[10, 1, 6],
@@ -765,7 +878,8 @@
 			"#11 b7 b9",
 			"b7 b9 #11",
 			"b9 #11 b7"
-		]
+		],
+		"rightShapeName": "Maj Triad on #11"
 	},
 	"maj13": {
 		"displayName": "Maj13",
@@ -780,6 +894,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[11, 2, 9],
 			[2, 9, 11],
@@ -789,7 +904,8 @@
 			"7 9 13",
 			"9 13 7",
 			"13 7 9"
-		]
+		],
+		"rightShapeName": "min7 shell on 7"
 	},
 	"shellMaj13": {
 		"displayName": "Maj13 (Shell)",
@@ -804,19 +920,21 @@
 			"3 7 1",
 			"7 1 3"
 		],
+		"leftShapeName": "Maj7 Shell",
 		"right": [
 			[7, 9, 2],
 			[9, 2, 7],
 			[2, 7, 9]
 		],
 		"rightDisplayNames": [
-			"5 9 13",
-			"9 13 5",
-			"13 5 9"
-		]
+			"5 13 9",
+			"13 9 5",
+			"9 5 13"
+		],
+		"rightShapeName": "sus2 on 5"
 	},
 	"shell6Maj13": {
-		"displayName": "6 Maj13 (Shell)",
+		"displayName": "Maj13 (Shell 6)",
 		"id": "shell6Maj13",
 		"left": [
 			[0, 4, 9],
@@ -828,6 +946,7 @@
 			"3 13 1",
 			"13 1 3"
 		],
+		"leftShapeName": "Maj6 Shell",
 		"right": [
 			[7, 11, 2],
 			[11, 2, 7],
@@ -837,7 +956,8 @@
 			"5 7 9",
 			"7 9 5",
 			"9 5 7"
-		]
+		],
+		"rightShapeName": "Maj Triad on 5" 
 	},
 	"min13": {
 		"displayName": "min13",
@@ -852,6 +972,7 @@
 			"b3 b7 1",
 			"b7 1 b3"
 		],
+		"leftShapeName": "min7 Shell",
 		"right": [
 			[2, 5, 9],
 			[5, 9, 2],
@@ -861,7 +982,8 @@
 			"9 11 13",
 			"11 13 9",
 			"13 9 11"
-		]
+		],
+		"rightShapeName": "min Triad on 9"
 	},
 	"dom13": {
 		"displayName": "13",
@@ -876,6 +998,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[10, 2, 9],
 			[2, 9, 10],
@@ -885,7 +1008,8 @@
 			"b7 9 13",
 			"9 13 b7",
 			"13 b7 9"
-		]
+		],
+		"rightShapeName": "Maj7 shell on b7"
 	},
 	"shellDom13": {
 		"displayName": "13 (Shell)",
@@ -900,16 +1024,18 @@
 			"3 b7 1",
 			"b7 1 3"
 		],
+		"leftShapeName": "Dom7 Shell",
 		"right": [
 			[7, 9, 2],
 			[9, 2, 7],
 			[2, 7, 9]
 		],
 		"rightDisplayNames": [
-			"5 9 13",
-			"9 13 5",
-			"13 5 9"
-		]
+			"5 13 9",
+			"13 9 5",
+			"9 5 13"
+		],
+		"rightShapeName": "sus2 on 5"
 	},
 	"dom13Sharp11": {
 		"displayName": "13 #11",
@@ -924,6 +1050,7 @@
 			"3 b7 1",
 			"b7 1 3"
 		],
+		"leftShapeName": "Dom7 Shell",
 		"right": [
 			[2, 6, 9],
 			[6, 9, 2],
@@ -933,7 +1060,8 @@
 			"9 #11 13",
 			"#11 13 9",
 			"13 9 #11"
-		]
+		],
+		"rightShapeName": "Maj Triad on 9"
 	},
 	"domb13Sharp11": {
 		"displayName": "b13 #11",
@@ -972,6 +1100,7 @@
 			"3 5 1",
 			"5 1 3"
 		],
+		"leftShapeName": "Maj Triad",
 		"right": [
 			[4, 9, 2],
 			[9, 2, 4],
@@ -981,7 +1110,8 @@
 			"3 6 9",
 			"6 9 3",
 			"9 3 6"
-		]
+		],
+		"rightShapeName": "4th stack on 3"
 	},
 	"min69": {
 		"displayName": "min6/9",
@@ -996,6 +1126,7 @@
 			"b3 5 1",
 			"5 1 b3"
 		],
+		"leftShapeName": "min Triad",
 		"right": [
 			[3, 9, 2],
 			[9, 2, 3],
@@ -1005,7 +1136,8 @@
 			"b3 6 9",
 			"6 9 b3",
 			"9 b3 6"
-		]
+		],
+		"rightShapeName": "Tritone + 4th on b3"
 	},
 	"sus4": {
 		"displayName": "sus4",
@@ -1020,6 +1152,7 @@
 			"4 5 1",
 			"5 1 4"
 		],
+		"leftShapeName": "sus4 Triad",
 		"right": [
 			[0, 5, 7],
 			[5, 7, 0],
@@ -1029,7 +1162,8 @@
 			"1 4 5",
 			"4 5 1",
 			"5 1 4"
-		]
+		],
+		"rightShapeName": "sus4 Triad"
 	},
 	"sus2": {
 		"displayName": "sus2",
@@ -1044,6 +1178,7 @@
 			"2 5 1",
 			"5 1 2"
 		],
+		"leftShapeName": "sus2 Triad",
 		"right": [
 			[0, 2, 7],
 			[2, 7, 0],
@@ -1053,7 +1188,8 @@
 			"1 2 5",
 			"2 5 1",
 			"5 1 2"
-		]
+		],
+		"rightShapeName": "sus2 Triad"
 	},
 	"sus24Lh2": {
 		"displayName": "sus2/4 (Lh2)",
@@ -1068,6 +1204,7 @@
 			"2 5 1",
 			"5 1 2"
 		],
+		"leftShapeName": "sus2 Triad",
 		"right": [
 			[0, 5, 7],
 			[5, 7, 0],
@@ -1077,7 +1214,8 @@
 			"1 4 5",
 			"4 5 1",
 			"5 1 4"
-		]
+		],
+		"rightShapeName": "sus4 Triad"
 	},
 	"sus24Lh4": {
 		"displayName": "sus2/4 (Lh4)",
@@ -1092,6 +1230,7 @@
 			"4 5 1",
 			"5 1 4"
 		],
+		"leftShapeName": "sus4 Triad",
 		"right": [
 			[0, 2, 7],
 			[2, 7, 0],
@@ -1101,7 +1240,8 @@
 			"1 2 5",
 			"2 5 1",
 			"5 1 2"
-		]
+		],
+		"rightShapeName": "sus2 Triad"
 	},
 	"sus7": {
 		"displayName": "7sus",
@@ -1116,6 +1256,7 @@
 			"4 5 1",
 			"5 1 4"
 		],
+		"leftShapeName": "sus4 Triad",
 		"right": [
 			[0, 5, 10],
 			[5, 10, 0],
@@ -1125,7 +1266,34 @@
 			"1 4 b7",
 			"4 b7 1",
 			"b7 1 4"
-		]
+		],
+		"rightShapeName": "4th stack on 1"
+	},
+	"sus7shell": {
+		"displayName": "7sus (Shell)",
+		"id": "sus7shell",
+		"left": [
+			[0, 7, 10],
+			[7, 10, 0],
+			[10, 0, 7]
+		],
+		"leftDisplayNames": [
+			"1 5 b7",
+			"5 b7 1",
+			"b7 1 5"
+		],
+		"leftShapeName": "min7 5th shell",
+		"right": [
+			[0, 5, 10],
+			[5, 10, 0],
+			[10, 0, 5]
+		],
+		"rightDisplayNames": [
+			"1 4 b7",
+			"4 b7 1",
+			"b7 1 4"
+		],
+		"rightShapeName": "4th stack on 1"
 	},
 	"sus9": {
 		"displayName": "9sus",
@@ -1140,6 +1308,7 @@
 			"4 5 1",
 			"5 1 4"
 		],
+		"leftShapeName": "sus4 Triad",
 		"right": [
 			[10, 2, 5],
 			[2, 5, 10],
@@ -1149,7 +1318,34 @@
 			"b7 9 4",
 			"9 4 b7",
 			"4 b7 9"
-		]
+		],
+		"rightShapeName": "Maj Triad on b7"
+	},
+	"sus9shell": {
+		"displayName": "9sus (Shell)",
+		"id": "sus9shell",
+		"left": [
+			[0, 7, 10],
+			[7, 10, 0],
+			[10, 0, 7]
+		],
+		"leftDisplayNames": [
+			"1 5 b7",
+			"5 b7 1",
+			"b7 1 5"
+		],
+		"leftShapeName": "min7 5th shell",
+		"right": [
+			[10, 2, 5],
+			[2, 5, 10],
+			[5, 10, 2]
+		],
+		"rightDisplayNames": [
+			"b7 9 4",
+			"9 4 b7",
+			"4 b7 9"
+		],
+		"rightShapeName": "Maj Triad on b7"
 	},
 	"susb9": {
 		"displayName": "b9sus",
@@ -1164,16 +1360,18 @@
 			"5 b7 1",
 			"b7 1 5"
 		],
+		"leftShapeName": "min7 5th shell",
 		"right": [
-			[1, 5, 0],
-			[5, 10, 1],
-			[10, 1, 5]
+			[10, 1, 5],
+			[1, 5, 10],
+			[5, 10, 1]
 		],
 		"rightDisplayNames": [
-			"b9 4 1",
-			"4 b7 b9",
-			"b7 b9 4"
-		]
+			"b7 b9 4",
+			"b9 4 b7",
+			"4 b7 b9"
+		],
+		"rightShapeName": "min Triad on b7"
 	},
 	"sus13": {
 		"displayName": "13sus",
@@ -1188,10 +1386,17 @@
 			"5 b7 1",
 			"b7 1 5"
 		],
+		"leftShapeName": "min7 5th shell",
 		"right": [
 			[2, 5, 9],
 			[5, 9, 2],
 			[9, 2, 5]
-		]
+		],
+		"rightDisplayNames": [
+			"9 11 13",
+			"11 13 9",
+			"13 9 11"
+		],
+		"rightShapeName": "min Triad on 9"
 	}
 }

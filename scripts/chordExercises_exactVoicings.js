@@ -23,8 +23,8 @@ function getVoicing(...args) {
     let lhInversion = input[3];
     let rhInversion = input[4];
 
-    outlet(6, [allVoicings[type][chord]['rightDisplayNames'][rhInversion]]);
-    outlet(5, [allVoicings[type][chord]['leftDisplayNames'][lhInversion]]);
+    outlet(6, [allVoicings[type][chord].rightShapeName]);
+    outlet(5, [allVoicings[type][chord].leftShapeName]);
 
     let lhVoicing = allVoicings[type][chord]['left'][lhInversion];
     let rhVoicing = allVoicings[type][chord]['right'][rhInversion];
