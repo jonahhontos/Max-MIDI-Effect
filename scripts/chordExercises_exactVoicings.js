@@ -12,8 +12,35 @@ let allVoicings = {
     twoAndFour: loadFile('twoAndFour')
 };
 
+let roots = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+let lhInversions = [];
+let rhInversions = [];
+
 outlets = 7;
 
+function setRoots(...args) {;
+    if (arrayfromargs(args).length > 0) {
+        roots = arrayfromargs(args);
+    } else {
+        roots = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    }
+}
+
+function setLHInversions(...args) {
+    if (arrayfromargs(args).length > 0) {
+        lhInversions = arrayfromargs(args);
+    } else {
+        lhInversions = [];
+    }
+}
+
+function setRHInversions(...args) {
+    if (arrayfromargs(args).length > 0) {
+        rhInversions = arrayfromargs(args);
+    } else {
+        rhInversions = [];
+    }
+}
 
 function getVoicing(...args) {
     let input = arrayfromargs(args);
@@ -72,10 +99,16 @@ function generateExerciseList(...args) {
     types.forEach((type) => {
         let chords = allVoicings[type];
         for (let chord in chords) {
+            let lhToUse = lhInversions.length === 0 ? chords[chord].left.length : lhInversions;
+            let rhToUse = rhInversions.length === 0 ? chords[chord].right.length : rhInversions;
+
             let displayName = chords[chord].displayName;
-            for (let lh=0; lh < chords[chord].left.length; lh++) {
-                for (let rh=0; rh < chords[chord].right.length; rh++) {
-                    for (let root=0; root < 12; root++) {
+            for (let lh of lhToUse) {
+                for (let rh of rhToUse) {
+                    for (let root of roots) {
+                        if (chords[chord].left[lh] === undefined || chords[chord].right[rh] === undefined) {
+                            continue;
+                        }
                         everyExercise.push([displayName, type, chords[chord].id, root, lh, rh]);
                     }
                 }
