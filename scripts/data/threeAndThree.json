@@ -257,7 +257,7 @@
 			"7 9 5",
 			"9 5 7"
 		],
-		"rightShapeName": "min Triad on 5"
+		"rightShapeName": "Maj Triad on 5"
 	},
 	"shellMaj9": {
 		"displayName": "Maj9 (Shell)",
@@ -283,7 +283,7 @@
 			"7 9 5",
 			"9 5 7"
 		],
-		"rightShapeName": "min Triad on 5"
+		"rightShapeName": "Maj Triad on 5"
 	},
 	"majAdd9": {
 		"displayName": "Maj Add9",
