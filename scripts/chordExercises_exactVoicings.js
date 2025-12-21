@@ -1,27 +1,63 @@
-// load the chord voicings
+outlets = 10;
+
+
 function loadFile(filename) {
-    let file = new File(`${filename}.json`, 'read');
-    let data = JSON.parse(file.readstring(10000000));
-    file.close();
+    let data = {};
+    try {
+        let file = new File(`${filename}.json`, 'read');
+        let stringVal = file.readstring(1000000000);
+        data = JSON.parse(stringVal);
+        file.close();
+    } catch (e) {
+        post(`error loading file ${filename}: ${e}\n`);
+        data = { error: e };
+    }
     return data;
 }
 loadFile.local = 1;
 
+function removeTrailingComma(str) {
+  return str.endsWith(',') ? str.slice(0, -1) : str;
+}
+removeTrailingComma.local = 1;
+
+function loadLongArray(filename) {
+    let data = [];
+    try {
+        let file = new File(`${filename}.json`, 'read');
+        file.postion = 0;
+        file.readline(); // opening bracket
+        while (file.postion < file.eof) {
+            let stringVal = file.readline();
+            if (stringVal === ']') { break; }
+            data.push(JSON.parse(removeTrailingComma(stringVal)));
+        }
+        file.close();
+    } catch (e) {
+        post(`error loading file ${filename}: ${e}\n`);
+        data = [e];
+    }
+    return data;
+}
+loadLongArray.local = 1;
+
+// load the chord voicings
 let allVoicings = { 
     threeAndThree: loadFile('threeAndThree'),
     twoAndFour: loadFile('twoAndFour')
 };
 
 let exerciseList = [];
-let loadedExerciseList = loadFile('exerciseList');
-if (loadedExerciseList && loadedExerciseList.isArray()) { 
+let loadedExerciseList = loadLongArray('exerciseList2');
+if (Array.isArray(loadedExerciseList)) { 
     exerciseList = loadedExerciseList; 
+    sendFirstExercise();
 }
 outlet(7, [exerciseList.length]);
 
 let missedExercises = [];
 let loadedMissedExercises = loadFile('missedExercises');
-if (loadedMissedExercises && loadedMissedExercises.isArray()) { 
+if (Array.isArray(loadedMissedExercises)) { 
     missedExercises = loadedMissedExercises; 
 }
 outlet(8, [missedExercises.length]);
@@ -32,8 +68,6 @@ let rhInversions = [];
 
 let missedMode = false;
 let missedQueue = [];
-
-outlets = 10;
 
 function setRoots(...args) {;
     if (arrayfromargs(args).length > 0) {
@@ -60,7 +94,7 @@ function setRHInversions(...args) {
 }
 
 function getVoicing(...args) {
-    let input = args.isArray() ? args : arrayfromargs(args);
+    let input = Array.isArray(args) ? args : arrayfromargs(args);
     let type = input[0];
     let chord = input[1]
     let root = input[2];
@@ -140,16 +174,26 @@ function generateExerciseList(...args) {
     });
 
     exerciseList = shuffleArray(exerciseList);
+    sendFirstExercise();
+    saveLists();
     outlet(7, [ exerciseList.length ]);
 }
 
 function saveLists() {
-    let file = new File('exerciseList.json', 'write');
-    file.writestring(JSON.stringify(exerciseList));
+    let file = new File('exerciseList2.json', 'write');
+    file.position = 0;
+    file.writeline('[');
+    for (let i = 0; i < exerciseList.length; i++) {
+        file.writeline(JSON.stringify(exerciseList[i]) + (i === exerciseList.length - 1 ? '' : ','));
+    }
+    file.writeline(']');
+    file.eof = file.position;
     file.close();
 
     file = new File('missedExercises.json', 'write');
+    file.position = 0;
     file.writestring(JSON.stringify(missedExercises));
+    file.eof = file.position;
     file.close();
 }
 
@@ -158,7 +202,6 @@ function nextExercise() {
         let nextExercise = exerciseList.splice(0, 1)[0];
         outlet(7, exerciseList.length);
         outlet(4, nextExercise);
-        getVoicing(nextExercise);
     } else if (missedMode && missedQueue.length > 0) {
         let nextExercise = missedQueue.splice(0, 1)[0];
         if (missedQueue.length === 0) {
@@ -167,7 +210,6 @@ function nextExercise() {
         }
         outlet(8, missedQueue.length);
         outlet(4, nextExercise);
-        getVoicing(nextExercise);
     }
 }
 
@@ -185,7 +227,11 @@ function toggleMissedMode() {
     }
 }
 
-function clearMissedExercises() {
+function clearMissedExercises() { 
     missedExercises = [];
     outlet(8, [missedExercises.length]);
+}
+
+function sendFirstExercise() {
+    outlet(4, exerciseList[0]);
 }
