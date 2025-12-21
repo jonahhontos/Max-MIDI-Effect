@@ -12,11 +12,28 @@ let allVoicings = {
     twoAndFour: loadFile('twoAndFour')
 };
 
+let exerciseList = [];
+let loadedExerciseList = loadFile('exerciseList');
+if (loadedExerciseList && loadedExerciseList.isArray()) { 
+    exerciseList = loadedExerciseList; 
+}
+outlet(7, [exerciseList.length]);
+
+let missedExercises = [];
+let loadedMissedExercises = loadFile('missedExercises');
+if (loadedMissedExercises && loadedMissedExercises.isArray()) { 
+    missedExercises = loadedMissedExercises; 
+}
+outlet(8, [missedExercises.length]);
+
 let roots = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 let lhInversions = [];
 let rhInversions = [];
 
-outlets = 7;
+let missedMode = false;
+let missedQueue = [];
+
+outlets = 10;
 
 function setRoots(...args) {;
     if (arrayfromargs(args).length > 0) {
@@ -43,7 +60,7 @@ function setRHInversions(...args) {
 }
 
 function getVoicing(...args) {
-    let input = arrayfromargs(args);
+    let input = args.isArray() ? args : arrayfromargs(args);
     let type = input[0];
     let chord = input[1]
     let root = input[2];
@@ -89,18 +106,24 @@ function shuffleArray(array) {
 }
 shuffleArray.local = 1;
 
+function getAllInversions(chord) {
+    let inversions = [];
+    for (let i = 0; i < chord.length; i++) {
+        inversions.push(i);
+    }
+    return inversions;
+}
+getAllInversions.local = 1;
+
 function generateExerciseList(...args) {
     let types = arrayfromargs(args);
-    let count = 0;
-    let everyExercise = [];
-
-    outlet(4, ['clear']);
+    exerciseList = [];
 
     types.forEach((type) => {
         let chords = allVoicings[type];
         for (let chord in chords) {
-            let lhToUse = lhInversions.length === 0 ? chords[chord].left.length : lhInversions;
-            let rhToUse = rhInversions.length === 0 ? chords[chord].right.length : rhInversions;
+            let lhToUse = lhInversions.length === 0 ? getAllInversions(chords[chord].left) : lhInversions;
+            let rhToUse = rhInversions.length === 0 ? getAllInversions(chords[chord].right) : rhInversions;
 
             let displayName = chords[chord].displayName;
             for (let lh of lhToUse) {
@@ -109,16 +132,60 @@ function generateExerciseList(...args) {
                         if (chords[chord].left[lh] === undefined || chords[chord].right[rh] === undefined) {
                             continue;
                         }
-                        everyExercise.push([displayName, type, chords[chord].id, root, lh, rh]);
+                        exerciseList.push([displayName, type, chords[chord].id, root, lh, rh]);
                     }
                 }
             }
         }
     });
 
-    let shuffledExercises = shuffleArray(everyExercise);
-    shuffledExercises.forEach( (exercise) => {
-        outlet(4, [count, ...exercise]);
-        count++;
-    });
+    exerciseList = shuffleArray(exerciseList);
+    outlet(7, [ exerciseList.length ]);
+}
+
+function saveLists() {
+    let file = new File('exerciseList.json', 'write');
+    file.writestring(JSON.stringify(exerciseList));
+    file.close();
+
+    file = new File('missedExercises.json', 'write');
+    file.writestring(JSON.stringify(missedExercises));
+    file.close();
+}
+
+function nextExercise() {
+    if (!missedMode && exerciseList.length > 0) {
+        let nextExercise = exerciseList.splice(0, 1)[0];
+        outlet(7, exerciseList.length);
+        outlet(4, nextExercise);
+        getVoicing(nextExercise);
+    } else if (missedMode && missedQueue.length > 0) {
+        let nextExercise = missedQueue.splice(0, 1)[0];
+        if (missedQueue.length === 0) {
+            missedMode = false;
+            outlet(9, 0);
+        }
+        outlet(8, missedQueue.length);
+        outlet(4, nextExercise);
+        getVoicing(nextExercise);
+    }
+}
+
+function missedExercise(...args) {
+    let missedExercise = arrayfromargs(args);
+    missedExercises.push(missedExercise);
+    outlet(8, [missedExercises.length]);
+}
+
+function toggleMissedMode() {
+    missedMode = !missedMode;
+
+    if (missedMode) {
+        missedQueue = [...missedExercises];
+    }
+}
+
+function clearMissedExercises() {
+    missedExercises = [];
+    outlet(8, [missedExercises.length]);
 }
