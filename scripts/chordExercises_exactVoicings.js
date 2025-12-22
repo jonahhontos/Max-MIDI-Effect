@@ -1,7 +1,17 @@
 outlets = 10;
 
+let roots = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+let lhInversions = [];
+let rhInversions = [];
 
-function loadFile(filename) {
+let exerciseList = [];
+let missedExercises = [];
+
+let missedMode = false;
+let missedQueue = [];
+
+
+function loadFile(filename) { 
     let data = {};
     try {
         let file = new File(`${filename}.json`, 'read');
@@ -25,9 +35,9 @@ function loadLongArray(filename) {
     let data = [];
     try {
         let file = new File(`${filename}.json`, 'read');
-        file.postion = 0;
+        file.position = 0;
         file.readline(); // opening bracket
-        while (file.postion < file.eof) {
+        while (file.position < file.eof) {
             let stringVal = file.readline();
             if (stringVal === ']') { break; }
             data.push(JSON.parse(removeTrailingComma(stringVal)));
@@ -47,7 +57,7 @@ let allVoicings = {
     twoAndFour: loadFile('twoAndFour')
 };
 
-let exerciseList = [];
+
 let loadedExerciseList = loadLongArray('exerciseList2');
 if (Array.isArray(loadedExerciseList)) { 
     exerciseList = loadedExerciseList; 
@@ -55,19 +65,11 @@ if (Array.isArray(loadedExerciseList)) {
 }
 outlet(7, [exerciseList.length]);
 
-let missedExercises = [];
 let loadedMissedExercises = loadFile('missedExercises');
 if (Array.isArray(loadedMissedExercises)) { 
     missedExercises = loadedMissedExercises; 
 }
 outlet(8, [missedExercises.length]);
-
-let roots = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-let lhInversions = [];
-let rhInversions = [];
-
-let missedMode = false;
-let missedQueue = [];
 
 function setRoots(...args) {;
     if (arrayfromargs(args).length > 0) {
@@ -231,6 +233,7 @@ function toggleMissedMode() {
 
 function clearMissedExercises() { 
     missedExercises = [];
+    saveLists();
     outlet(8, [missedExercises.length]);
 }
 
