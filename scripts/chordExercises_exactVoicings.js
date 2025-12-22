@@ -17,6 +17,8 @@ function loadFile(filename) {
         let file = new File(`${filename}.json`, 'read');
         let stringVal = file.readstring(1000000000);
         data = JSON.parse(stringVal);
+		//post("Selected file path: " + file.pathname + "\n");
+    	//	post("Selected folder: " + file.foldername + "\n");
         file.close();
     } catch (e) {
         post(`error loading file ${filename}: ${e}\n`);
@@ -239,5 +241,6 @@ function clearMissedExercises() {
 
 function sendFirstExercise() {
 	let exercise = missedMode ? missedQueue[0] : exerciseList[0];
-    outlet(4, exerciseList[0]);
+	post(`exercise: ${exercise}\n`);
+    outlet(4, exercise);
 }
