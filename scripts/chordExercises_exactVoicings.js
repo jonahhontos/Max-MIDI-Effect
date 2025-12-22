@@ -225,6 +225,8 @@ function toggleMissedMode() {
     if (missedMode) {
         missedQueue = [...missedExercises];
     }
+
+	sendFirstExercise();
 }
 
 function clearMissedExercises() { 
@@ -233,5 +235,6 @@ function clearMissedExercises() {
 }
 
 function sendFirstExercise() {
+	let exercise = missedMode ? missedQueue[0] : exerciseList[0];
     outlet(4, exerciseList[0]);
 }
