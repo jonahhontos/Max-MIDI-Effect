@@ -731,16 +731,16 @@
 		"displayName": "ø11 (Shell)",
 		"id": "shellHalfDim11",
 		"left": [
-			[0, 6, 10],
-			[6, 10, 0],
-			[10, 0, 6]
+			[0, 3, 10],
+			[3, 10, 0],
+			[10, 0, 3]
 		],
 		"leftDisplayNames": [
-			"1 b5 b7",
-			"b5 b7 1",
-			"b7 1 b5"
+			"1 b3 b7",
+			"b3 b7 1",
+			"b7 1 b3"
 		],
-		"leftShapeName": "min7 b5 shell",
+		"leftShapeName": "min7 shell",
 		"right": [
 			[6, 10, 5],
 			[10, 5, 6],
