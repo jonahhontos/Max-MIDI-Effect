@@ -1355,6 +1355,33 @@
 		"displayName": "b9sus",
 		"id": "susb9",
 		"left": [
+			[0, 5, 7],
+			[5, 7, 0],
+			[7, 0, 5]
+		],
+		"leftDisplayNames": [
+			"1 4 57",
+			"4 5 1",
+			"5 1 4"
+		],
+		"leftShapeName": "sus4",
+		"right": [
+			[10, 1, 5],
+			[1, 5, 10],
+			[5, 10, 1]
+		],
+		"rightDisplayNames": [
+			"b7 b9 4",
+			"b9 4 b7",
+			"4 b7 b9"
+		],
+		"rightShapeName": "min Triad on b7"
+	},
+	,
+	"susb9shell": {
+		"displayName": "b9sus (shell)",
+		"id": "susb9shell",
+		"left": [
 			[0, 7, 10],
 			[7, 10, 0],
 			[10, 0, 7]
