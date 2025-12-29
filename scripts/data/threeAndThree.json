@@ -731,16 +731,16 @@
 		"displayName": "ø11 (Shell)",
 		"id": "shellHalfDim11",
 		"left": [
-			[0, 6, 10],
-			[6, 10, 0],
-			[10, 0, 6]
+			[0, 3, 10],
+			[3, 10, 0],
+			[10, 0, 3]
 		],
 		"leftDisplayNames": [
-			"1 b5 b7",
-			"b5 b7 1",
-			"b7 1 b5"
+			"1 b3 b7",
+			"b3 b7 1",
+			"b7 1 b3"
 		],
-		"leftShapeName": "min7 b5 shell",
+		"leftShapeName": "min7 shell",
 		"right": [
 			[6, 10, 5],
 			[10, 5, 6],
@@ -1354,6 +1354,33 @@
 	"susb9": {
 		"displayName": "b9sus",
 		"id": "susb9",
+		"left": [
+			[0, 5, 7],
+			[5, 7, 0],
+			[7, 0, 5]
+		],
+		"leftDisplayNames": [
+			"1 4 57",
+			"4 5 1",
+			"5 1 4"
+		],
+		"leftShapeName": "sus4",
+		"right": [
+			[10, 1, 5],
+			[1, 5, 10],
+			[5, 10, 1]
+		],
+		"rightDisplayNames": [
+			"b7 b9 4",
+			"b9 4 b7",
+			"4 b7 b9"
+		],
+		"rightShapeName": "min Triad on b7"
+	},
+	,
+	"susb9shell": {
+		"displayName": "b9sus (shell)",
+		"id": "susb9shell",
 		"left": [
 			[0, 7, 10],
 			[7, 10, 0],
